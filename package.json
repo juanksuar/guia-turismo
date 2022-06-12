@@ -4,7 +4,8 @@
   "description": "Pequeña guia para el turista",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "lite-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/juanksuar/guia-turismo/issues"
   },
-  "homepage": "https://github.com/juanksuar/guia-turismo#readme"
+  "homepage": "https://github.com/juanksuar/guia-turismo#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
