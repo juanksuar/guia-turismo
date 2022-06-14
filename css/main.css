@@ -1,0 +1,15 @@
+.jumbotron{
+    background-color: aqua;
+    color: white;
+    text-align:center;
+}
+.btn{
+    background-color: green;
+    color:white;
+}
+.footer{
+    background-color: blue;
+    color:white;
+    margin-top:10px;
+    padding:10px 2px 0px 2px;
+}
