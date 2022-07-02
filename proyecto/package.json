@@ -37,6 +37,7 @@
     "connect-logger": "^0.0.1",
     "cookie": "^0.4.2",
     "cors": "^2.8.5",
+    "cssmin": "^0.4.3",
     "debug": "^2.6.9",
     "depd": "^2.0.0",
     "destroy": "^1.0.4",
@@ -64,6 +65,7 @@
     "glob-parent": "^5.1.2",
     "graceful-fs": "^4.2.10",
     "has-ansi": "^2.0.0",
+    "htmlmin": "^0.0.7",
     "http-errors": "^2.0.0",
     "http-proxy": "^1.18.1",
     "iconv-lite": "^0.4.24",
@@ -132,8 +134,10 @@
     "toidentifier": "^1.0.1",
     "typescript": "^4.7.4",
     "ua-parser-js": "^1.0.2",
+    "uglifyjs": "^2.4.11",
     "universalify": "^0.1.2",
     "unpipe": "^1.0.0",
+    "usemin-cli": "^0.6.0",
     "utils-merge": "^1.0.1",
     "vary": "^1.1.2",
     "wrap-ansi": "^7.0.0",
@@ -143,14 +147,22 @@
     "yargs": "^17.5.1",
     "yargs-parser": "^21.0.1"
   },
+  "author": "Juan Carlos Suarez",
+  "license": "ISC",
   "devDependencies": {
-    "node-sass": "^7.0.1"
+    "copyfiles": "^2.4.1",
+    "node-sass": "^7.0.1",
+    "onchange": "^7.1.0",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server",
-    "scss" : "node-sass -o css/ css/"
-  },
-  "author": "Juan Carlos Suarez",
-  "license": "ISC"
+    "watch:scss": "onchange 'css/*.scss' --npm run sccs",
+    "start": "concurrently  \"npm run watch:scss\"\"npm run dev\"",
+    "scss": "node-sass -o css/ css/",
+    "clean": "rimraf.dist",
+    "imagemin": "imagemin images/* --out-dir dist/images",
+    "usemin" :"usemin index.html -d dis --htmlmin -o dis/index.html && usemin about.html -d dis --htmlmin -o dis/about.html && usemin horarios.html -d dis --htmlmin -o dis/horarios.html && usemin precios.html -d dis --htmlmin -o dis/precios.html && usemin contacto.html -d dis --htmlmin -o dis/contacto.html",
+    "build":"npm run clean && npm run scss && npm run imagemin && npm run usemin"
+  }
 }
