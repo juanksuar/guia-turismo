@@ -1,13 +1,16 @@
+$green: #3deb34;
 $blue: #4266f5;
-$grey:   #575b6e;
-$green:  #3deb34;
+$grey: #575b6es;
+@mixing padding($top,$bottom){
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
 
 .jumbotron{
     background-color: aqua;
     color: white;
     text-align:center;
-    padding-top:50px;
-    padding-bottom:30px;
+    @include padding(50px,30px);
 }
 .btn{
     background-color: $green;

@@ -151,9 +151,22 @@
   "license": "ISC",
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "grunt": "^1.5.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-concat": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-filerev": "^2.3.1",
+    "grunt-usemin": "^0.1.13",
+    "jit-grunt": "^0.10.0",
     "node-sass": "^7.0.1",
     "onchange": "^7.1.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "time-grunt": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -162,7 +175,7 @@
     "scss": "node-sass -o css/ css/",
     "clean": "rimraf.dist",
     "imagemin": "imagemin images/* --out-dir dist/images",
-    "usemin" :"usemin index.html -d dis --htmlmin -o dis/index.html && usemin about.html -d dis --htmlmin -o dis/about.html && usemin horarios.html -d dis --htmlmin -o dis/horarios.html && usemin precios.html -d dis --htmlmin -o dis/precios.html && usemin contacto.html -d dis --htmlmin -o dis/contacto.html",
-    "build":"npm run clean && npm run scss && npm run imagemin && npm run usemin"
+    "usemin": "usemin index.html -d dis --htmlmin -o dis/index.html && usemin about.html -d dis --htmlmin -o dis/about.html && usemin horarios.html -d dis --htmlmin -o dis/horarios.html && usemin precios.html -d dis --htmlmin -o dis/precios.html && usemin contacto.html -d dis --htmlmin -o dis/contacto.html",
+    "build": "npm run clean && npm run scss && npm run imagemin && npm run usemin"
   }
 }
