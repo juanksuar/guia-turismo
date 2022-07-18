@@ -1,9 +1,10 @@
+<script>
 $(function(){
     $("[data-toggle='tooltip']").tooltip();
   })
   $(function()){
     $('[data-toggle="popover"]').popover();
-  })
+  }
   $('#contactoBtn').on(show-bs-modal Function(e){
     console.log('el modal contacto se esta mostrando');
   })
